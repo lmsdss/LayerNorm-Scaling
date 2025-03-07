@@ -1,13 +1,16 @@
+<div align="center">
+  
 # The Curse of Depth in Large Language Models
-[[`arxiv`](https://arxiv.org/abs/2502.05795)] 
+[[`Arxiv`](https://arxiv.org/abs/2502.05795)] 
 [[X(Twitter)](https://x.com/Shiwei_Liu66/status/1889257901346152844)]
+[[Model](https://huggingface.co/pengxiang/LNS_1B)]
 
 We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) where deeper layers contribute less effectively to training due to the widespread use of Pre-Layer Normalization (Pre-LN). Our analysis identifies this issue as a key bottleneck in LLM optimization and proposes LayerNorm Scaling as a solution to mitigate its impact.
 
 <div align="center">
   <img src="scaling.png" alt="Image 2" style="width: 900px; margin: 0 auto;">
 </div>
-
+</div>
 
 ## Abstract
 
