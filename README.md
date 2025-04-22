@@ -17,7 +17,7 @@ We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) wher
 In this paper, we introduce the Curse of Depth, a concept that highlights, explains, and addresses the recent observation in modern Large Language Models (LLMs) where nearly half of the layers are less effective than expected. We first confirm the wide existence of this phenomenon across the most popular families of LLMs such as Llama, Mistral, DeepSeek, and Qwen. Our analysis, theoretically and empirically, identifies that the underlying reason for the ineffectiveness of deep layers in LLMs is the widespread usage of Pre-Layer Normalization (Pre-LN). While Pre-LN stabilizes the training of Transformer LLMs, its output variance exponentially grows with the model depth, which undesirably causes the derivative of the deep Transformer blocks to be an identity matrix, and therefore barely contributes to the training. To resolve this training pitfall, we propose LayerNorm Scaling, which scales the variance of output of the layer normalization inversely by the square root of its depth. This simple modification mitigates the output variance explosion of deeper Transformer layers, improving their contribution. Our experimental results, spanning model sizes from 130M to 1B, demonstrate that LayerNorm Scaling significantly enhances LLM pre-training performance compared to Pre-LN. Moreover, this improvement seamlessly carries over to supervised fine-tuning. All these gains can be attributed to the fact that LayerNorm Scaling enables deeper layers to contribute more effectively during training.
 
 ## Hugging Face
-We have uploaded the trained weights for the 1B model using LayerNorm Scaling (CoD). 
+We have uploaded the trained weights for the 1B model using LayerNorm Scaling (LNS). 
 You can download them from [https://huggingface.co/pengxiang/LNS_1B].
 
 ## Quick Start
@@ -27,20 +27,20 @@ You can download them from [https://huggingface.co/pengxiang/LNS_1B].
 You can configure the environment using the following command lines:
 
 ```bash
-conda create -n cod python=3.9 -y
-conda activate cod
+conda create -n LNS python=3.9 -y
+conda activate LNS
 pip install -r exp_requirements.txt
 ```
 
 ### Training Examples
-We provide scripts to train models of different sizes using Pre-LN, Post-LN, Mix-LN, and LayerNorm Scaling (CoD).
+We provide scripts to train models of different sizes using Pre-LN, Post-LN, Mix-LN, and LayerNorm Scaling (LNS).
 
 Train a 130M Model:
 ```bash
 bash run_130m.sh pre      3   # Pre-LN
 bash run_130m.sh post     3   # Post-LN
 bash run_130m.sh post_pre 3   # Mix-LN
-bash run_130m.sh cod      3   # LayerNorm Scaling (CoD)
+bash run_130m.sh LNS      3   # LayerNorm Scaling (LNS)
 
 (Note: 3 represents the number of Post-LN layers in Mix-LN.)
 ```
@@ -51,7 +51,7 @@ Train a 250M Mode:
 bash run_250m.sh pre      6   # Pre-LN
 bash run_250m.sh post     6   # Post-LN
 bash run_250m.sh post_pre 6   # Mix-LN
-bash run_250m.sh cod      6   # LayerNorm Scaling (CoD)
+bash run_250m.sh LNS      6   # LayerNorm Scaling (LNS)
 
 (Note: 6 represents the number of Post-LN layers in Mix-LN.)
 ```
@@ -61,7 +61,7 @@ Train a 350M Mode:
 bash run_350m.sh pre      6   # Pre-LN
 bash run_350m.sh post     6   # Post-LN
 bash run_350m.sh post_pre 6   # Mix-LN
-bash run_350m.sh cod      6   # LayerNorm Scaling (CoD)
+bash run_350m.sh LNS      6   # LayerNorm Scaling (LNS)
 ```
 
 Train a 1B Mode:
@@ -69,7 +69,7 @@ Train a 1B Mode:
 bash run_1b.sh pre        6   # Pre-LN
 bash run_1b.sh post       6   # Post-LN
 bash run_1b.sh post_pre   6   # Mix-LN
-bash run_1b.sh cod        6   # LayerNorm Scaling (CoD)
+bash run_1b.sh LNS        6   # LayerNorm Scaling (LNS)
 ```
 
 ### Performance Drop
