@@ -289,7 +289,7 @@ class LlamaDecoderLayer(nn.Module):
             scale_mlp_output=scale_mlp_output,
         )
         
-        if norm_type == 'pre' or norm_type == 'scale_pre' or norm_type == 'cod':
+        if norm_type == 'pre' or norm_type == 'scale_pre' or norm_type == 'LNS':
             self.input_layernorm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
             self.post_attention_layernorm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
         elif norm_type== 'post' or norm_type == 'deeppost':
@@ -424,7 +424,7 @@ class LlamaDecoderLayer(nn.Module):
             hidden_states = residual + hidden_states
 
         
-        elif norm_type == 'cod':
+        elif norm_type == 'LNS':
             # Layer 1: Self-Attention
             residual = hidden_states
             hidden_states = self.input_layernorm(hidden_states)
