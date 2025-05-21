@@ -22,7 +22,7 @@ In this paper, we introduce the Curse of Depth, a concept that highlights, expla
 Combining LNS with Scaled Initialization (which scales the initialization of W0 and W2 by the overall depth $1/\sqrt{2L}$) undermines the effectiveness of LNS, performing worse than using LNS alone. This highlights the importance of eliminating conflicting initialization strategies before adopting LNS.
 
 <div align="center">
-  <img src="scaled_init.png" alt="Image 2" style="width: 400px; margin: 0 auto;">
+  <img src="scaled_init.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
 </div>
 </div>
 
