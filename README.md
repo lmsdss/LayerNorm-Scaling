@@ -9,7 +9,7 @@
 We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) where deeper layers contribute less effectively to training due to the widespread use of Pre-Layer Normalization (Pre-LN). Our analysis identifies this issue as a key bottleneck in LLM optimization and proposes LayerNorm Scaling as a solution to mitigate its impact.
 
 <div align="center">
-  <img src="scaling.png" alt="Image 2" style="width: 900px; margin: 0 auto;">
+  <img src="images/diagrams_scaling.png" alt="Image 2" style="width: 900px; margin: 0 auto;">
 </div>
 </div>
 
@@ -26,7 +26,21 @@ To resolve this training pitfall, we propose LayerNorm Scaling (LNS), which scal
 Combining LNS with Scaled Initialization used by most LLM training frameworks (which scales the initialization of W0 and W2 by the overall depth $1/\sqrt{2L}$, or something similar) diminishes the effectiveness of LNS. This highlights the importance of eliminating conflicting initialization strategies before adopting LNS.
 
 <div align="center">
-  <img src="scaled_init.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
+  <img src="images/Caveat.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
+</div>
+</div>
+
+## Results of LLaMa pre-training
+
+<div align="center">
+  <img src="images/results.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
+</div>
+</div>
+
+## Training curves of OLMo-7B pre-trained on 20B tokens
+
+<div align="center">
+  <img src="images/7B_curve.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
 </div>
 </div>
 
