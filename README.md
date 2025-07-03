@@ -26,14 +26,14 @@ To resolve this training pitfall, we propose LayerNorm Scaling (LNS), which scal
 Combining LNS with Scaled Initialization used by most LLM training frameworks (which scales the initialization of W0 and W2 by the overall depth $1/\sqrt{2L}$, or something similar) diminishes the effectiveness of LNS. This highlights the importance of eliminating conflicting initialization strategies before adopting LNS.
 
 <div align="center">
-  <img src="images/Caveat.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
+  <img src="images/Caveat.png" alt="Image 2" style="width: 800px; margin: 0 auto;">
 </div>
 </div>
 
 ## Results of LLaMa pre-training
 
 <div align="center">
-  <img src="images/results.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
+  <img src="images/results.png" alt="Image 2" style="width: 900px; margin: 0 auto;">
 </div>
 </div>
 
