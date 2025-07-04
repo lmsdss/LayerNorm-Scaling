@@ -1,5 +1,9 @@
 <div align="center">
-  
+
+  <a href="[https://github.com/allenai/OLMo/blob/main/LICENSE](https://github.com/lmsdss/LayerNorm-Scaling/edit/main/README)">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/allenai/OLMo">
+  </a>
+
 # The Curse of Depth in Large Language Models
 [[`Arxiv`](https://arxiv.org/abs/2502.05795)] 
 [[X(Twitter)](https://x.com/Shiwei_Liu66/status/1889257901346152844)]
@@ -131,7 +135,6 @@ python layer_remove.py \
 
 
 ### Acknowledgement
-This repository is built upon the previous awesome repositories such as [GaLore](https://github.com/jiaweizzhao/GaLore), [Mix-LN](https://github.com/pixeli99/MixLN/tree/main), [OLMo](). Thanks for their great work!
+This repository is built upon the previous awesome repositories such as [GaLore](https://github.com/jiaweizzhao/GaLore), [Mix-LN](https://github.com/pixeli99/MixLN/tree/main), [OLMo](https://github.com/allenai/OLMo). Thanks for their great work!
 
-### License
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
