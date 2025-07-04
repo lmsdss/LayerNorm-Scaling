@@ -117,6 +117,7 @@ python layer_remove.py \
     --save_path ./llama_7b_removed_1
 ```
 
+
 ### 📚Citation
 
 ```bibtex
@@ -130,4 +131,7 @@ python layer_remove.py \
 
 
 ### Acknowledgement
-This repository is built upon the [Mix-LN](https://github.com/pixeli99/MixLN/tree/main) repositories. Thanks for their great work!
+This repository is built upon the previous awesome repositories such as [GaLore](https://github.com/jiaweizzhao/GaLore), [Mix-LN](https://github.com/pixeli99/MixLN/tree/main), [OLMo](). Thanks for their great work!
+
+### License
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
