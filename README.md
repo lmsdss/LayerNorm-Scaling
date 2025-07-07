@@ -25,9 +25,9 @@ identifies that the underlying reason for the ineffectiveness of deep layers in 
 output variance exponentially grows with the model depth, which undesirably causes the derivative of the deep Transformer blocks to be an identity matrix, and therefore barely contributes to the training.
 To resolve this training pitfall, we propose LayerNorm Scaling (LNS), which scales the variance of output of the layer normalization inversely by the square root of its depth. This simple modification mitigates the output variance explosion of deeper Transformer layers, improving their contribution. Across a wide range of model sizes (130M to 7B), our experiments show that LNS consistently outperforms previous normalization and scaling techniques in enhancing LLM pre-training performance. Moreover, this improvement seamlessly carries over to supervised fine-tuning. All these gains can be attributed to the fact that LayerNorm Scaling enables deeper layers to contribute more effectively during training.
 
-## Caveat 
+## A Quick Word Before You Start 
 
-Combining LNS with Scaled Initialization used by most LLM training frameworks (which scales the initialization of W0 and W2 by the overall depth $1/\sqrt{2L}$, or something similar) diminishes the effectiveness of LNS. This highlights the importance of eliminating conflicting initialization strategies before adopting LNS.
+Combining LNS with Scaled Initialization used by most LLM training frameworks (e.g., [OLMo's init](https://github.com/allenai/OLMo/blob/f3dff833c880add075b123df9ddc31423086ef31/olmo/model.py#L493) or something similar) diminishes the effectiveness of LNS. We strongly recommend using [normal init](https://github.com/allenai/OLMo/blob/f3dff833c880add075b123df9ddc31423086ef31/olmo/model.py#L489) before adopting LNS. 
 
 <div align="center">
   <img src="images/Caveat.png" alt="Image 2" style="width: 600px; margin: 0 auto;">
