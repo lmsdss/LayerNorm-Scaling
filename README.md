@@ -17,6 +17,10 @@ We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) wher
 </div>
 </div>
 
+## Updates
+- Analysis of Group Query Attention (GQA) will come soon.
+- **2025.July.1**: Updated arxiv version with: 1. Parameter Scaling from 60M to 7B, comparison with OLMo’s Scaled Initialization, Qwen2.5 architecture, ViT experiments, comparison against other scaling methods. 
+- **2025.Feb.9**: Arxiv and code released.
 ## Abstract
 
 In this paper, we introduce the Curse of Depth, a concept that highlights, explains, and addresses the recent observation in modern Large Language Models (LLMs) where nearly half of the layers are less
