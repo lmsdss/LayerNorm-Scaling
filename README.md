@@ -19,7 +19,12 @@ We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) wher
 
 ## Updates
 - Analysis of Group Query Attention (GQA) will come soon.
-- **2025.July.1**: Updated arxiv version with: 1. Parameter Scaling from 60M to 7B, comparison with OLMo’s Scaled Initialization, Qwen2.5 architecture, ViT experiments, comparison against other scaling methods. 
+- **2025.July.1**: Updated arxiv version with:
+   1. Parameter Scaling from 60M to 7B,
+   2. Comparison with OLMo’s Scaled Initialization,
+   3. Exp with Qwen2.5 architecture
+   4. ViT experiments
+   5. Comparison against other scaling methods. 
 - **2025.Feb.9**: Arxiv and code released.
 ## Abstract
 
