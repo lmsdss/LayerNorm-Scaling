@@ -18,7 +18,7 @@ We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) wher
 </div>
 
 ## Updates
-- Analysis of Group Query Attention (GQA) will come soon.
+- **2025.Spe.18**: Accepted by NeurIPS 2025. 
 - **2025.July.1**: Updated arxiv version with:
    1. Parameter Scaling from 60M to 7B,
    2. Comparison with OLMo’s Scaled Initialization,
