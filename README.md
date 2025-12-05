@@ -18,6 +18,7 @@ We present the Curse of Depth, a phenomenon in Large Language Models (LLMs) wher
 </div>
 
 ## Updates
+- **2025.Nov.11**: Merged in OLMo-core. 
 - **2025.Oct.06**: Happy to see that LayerNorm Scaling stacks well with other training tricks https://x.com/iamgrigorev/status/1974794272642576861.
 - **2025.Spe.18**: Accepted by NeurIPS 2025. 
 - **2025.July.1**: Updated arxiv version with:
