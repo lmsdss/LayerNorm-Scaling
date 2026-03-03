@@ -159,8 +159,8 @@ def plot_angular_distance_heatmap(data_array, L_total, vmin=0.0, vmax=1.0, save_
         plt.savefig(save_path, dpi=300, bbox_inches="tight", format="pdf")
     plt.show()
 
-# Total number of layers (e.g. Qwen3-8B has 36; set 12 here for demo; adjust for your model)
-L_TOTAL_LAYERS = 12
+# Total number of layers (e.g. Qwen3-8B has 36;  adjust for your model)
+L_TOTAL_LAYERS = 36
 heatmap_path = os.path.join(OUTPUT_DIR, "qwen3_angular_distance.pdf")
 plot_angular_distance_heatmap(alldata_normed, L_TOTAL_LAYERS, save_path=heatmap_path)
 
