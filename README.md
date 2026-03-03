@@ -121,9 +121,9 @@ We make modifications based on https://github.com/sramshetty/ShortGPT/tree/hf-mo
 ```bash
 cd utils
 python angular_analysis.py # Qwen3-8B
-
-
+```
 ### Performance Drop
+
 Calculate the performance drop after removing different layers. We use [lm_eval](https://github.com/EleutherAI/lm-evaluation-harness) to obtain evaluation results. Please refer to its installation instructions to configure `lm_eval``.
 ```bash
 git clone https://github.com/EleutherAI/lm-evaluation-harness
