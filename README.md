@@ -114,6 +114,14 @@ bash run_1b.sh post       6   # Post-LN
 bash run_1b.sh post_pre   6   # Mix-LN
 bash run_1b.sh LNS        6   # LayerNorm Scaling (LNS)
 ```
+### Angular Distance
+
+We make modifications based on https://github.com/sramshetty/ShortGPT/tree/hf-models, mainly to calculate the angular distance between different layers. To calculate the angular distance between two layers, you can run the following command:
+
+```bash
+cd utils
+python angular_analysis.py # Qwen3-8B
+
 
 ### Performance Drop
 Calculate the performance drop after removing different layers. We use [lm_eval](https://github.com/EleutherAI/lm-evaluation-harness) to obtain evaluation results. Please refer to its installation instructions to configure `lm_eval``.
